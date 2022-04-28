@@ -16,15 +16,18 @@ author = "Tim Hilt"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Tim Hilt's personal website"
 keywords = "blog,developer,personal"
-info = ["Embedded, Full Stack and Devops Engineer", "Linux enthusiast"]
-# avatarURL = "images/avatar.jpg"
-gravatar = "thilt@in-technology.eu"
+info = ["Embedded, Full Stack and DevOps Engineer", "Linux enthusiast"]
+avatarURL = "img/avatar.png"
+# gravatar = "thilt@in-technology.eu"
 dateFormat = "January 2, 2006"
 since = 2022
+math = true
 # Git Commit in Footer, uncomment the line below to enable it
 commit = "https://github.com/luizdepra/hugo-coder/tree/"
 # Right To Left, shift content direction for languagues such as Arabic
 rtl = false
+favicon_32 = "img/favicon_32x32.png"
+favicon_16 = "img/favicon_16x16.png"
 # Specify light/dark colorscheme
 # Supported values:
 # "auto" (use preference set by browser)
@@ -106,12 +109,6 @@ weight = 1
 url = "https://github.com/tim-hilt/"
 
 [[params.social]]
-name = "Twitter"
-icon = "fa fa-2x fa-twitter"
-weight = 3
-url = "https://twitter.com/johndoe/"
-
-[[params.social]]
 name = "LinkedIn"
 icon = "fa fa-2x fa-linkedin"
 weight = 4
@@ -121,52 +118,34 @@ url = "https://www.linkedin.com/in/tim-hilt-2958a11b7/"
 languageName = ":uk:"
 
 [[languages.en.menu.main]]
-name = "About"
-weight = 1
-url = "about/"
-
-[[languages.en.menu.main]]
 name = "Blog"
-weight = 2
+weight = 1
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "Projects"
+name = "About Me"
+weight = 2
+url = "about/"
+
+[[languages.en.menu.main]]
+name = "CV"
 weight = 3
-url = "projects/"
+url = "cv/"
 
 [[languages.en.menu.main]]
 name = "Contact me"
-weight = 5
+weight = 4
 url = "contact/"
 
-# TODO: Add german translation
-[languages.pt-br]
-languageName = ":brazil:"
-title = "João Ninguém"
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', "nvim"]
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
 
-[languages.pt-br.params]
-author = "João Ninguém"
-info = "Full Stack DevOps e Mágico"
-description = "Sítio pessoal de João Ninguém"
-keywords = "blog,desenvolvedor,pessoal"
+  [security.funcs]
+    getenv = ['^HUGO_']
 
-[[languages.pt-br.menu.main]]
-name = "Sobre"
-weight = 1
-url = "about/"
-
-[[languages.pt-br.menu.main]]
-name = "Blog"
-weight = 2
-url = "posts/"
-
-[[languages.pt-br.menu.main]]
-name = "Projetos"
-weight = 3
-url = "projects/"
-
-[[languages.pt-br.menu.main]]
-name = "Contato"
-weight = 5
-url = "contact/"
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
