@@ -38,7 +38,7 @@ outputs:
 params:
   author: Tim Hilt
   description: My Website
-  defaultTheme: light
+  defaultTheme: auto
   disableThemeToggle: false
   ShowReadingTime: false
   ShowShareButtons: false
@@ -72,5 +72,4 @@ markup:
   highlight:
     noClasses: false
     codeFences: true
-    style: monokai
 
