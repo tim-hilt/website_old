@@ -17,16 +17,16 @@ languages:
     menu:
       main:
         - name: About
-          url: about
+          url: about/
           weight: 1
         - name: Posts
-          url: posts
+          url: posts/
           weight: 2
         - name: CV
-          url: cv
+          url: cv/
           weight: 3
         - name: Contact
-          url: contact
+          url: contact/
           weight: 4
 
 outputs:
