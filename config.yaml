@@ -1,0 +1,76 @@
+baseURL: http://www.tim-hilt.github.io
+title: Tim Hilt
+theme: hugo-PaperMod
+
+enableInlineShortcodes: true
+buildDrafts: true
+enableEmoji: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: About
+          url: about
+          weight: 1
+        - name: Posts
+          url: posts
+          weight: 2
+        - name: CV
+          url: cv
+          weight: 3
+        - name: Contact
+          url: contact
+          weight: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  author: Tim Hilt
+  description: My Website
+  defaultTheme: light
+  disableThemeToggle: false
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowToc: false
+  HideFooter: true
+  math: true
+
+  assets:
+    favicon16x16: img/favicon_16x16.png
+    favicon32x32: img/favicon_32x32.png
+    disableHLJS: true
+
+  homeInfoParams:
+    Title: Tim Hilt
+    Content: >
+      Welcome to my Website!
+  
+  socialIcons:
+    - name: github
+      url: https://github.com/tim-hilt
+    - name: linkedin
+      url: https://www.linkedin.com/in/tim-hilt-2958a11b7/
+    - name: stackoverflow
+      url: https://stackoverflow.com/users/9076590/tim-hilt
+    - name: twitter
+      url: https://twitter.com/HiltTim
+
+markup:
+  highlight:
+    noClasses: false
+    codeFences: true
+    style: monokai
+
