@@ -1,0 +1,12 @@
+:root {
+  --hljs-bg: #eeeeee;
+}
+
+.dark {
+  --hljs-bg: #282c34;
+}
+
+.post-content pre code {
+  color: unset;
+}
+
